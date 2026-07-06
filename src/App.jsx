@@ -280,14 +280,18 @@ function App() {
 
             <motion.div
               {...fadeIn}
-              className="mx-auto flex aspect-square w-full max-w-xs items-center justify-center rounded-full border border-teal-400/30 bg-slate-900/60 p-3 shadow-inner shadow-slate-950/40 sm:max-w-sm"
-              aria-label="Profile photo"
+              className="flex items-center justify-center"
             >
-              <img
-                src={profileImage}
-                alt="Karpagaraman M"
-                className="h-40 w-40 rounded-full object-cover object-center ring-4 ring-teal-300/70 sm:h-52 sm:w-52"
-              />
+              <div className="profile-container" aria-label="Profile photo">
+                <div className="profile-gradient-border"></div>
+                <div className="profile-image-wrapper">
+                  <img
+                    src={profileImage}
+                    alt="Karpagaraman M"
+                    className="profile-img"
+                  />
+                </div>
+              </div>
             </motion.div>
           </div>
         </section>
