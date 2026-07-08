@@ -50,29 +50,4 @@ document.addEventListener('DOMContentLoaded', () => {
   // Run once initially to highlight active link on load
   scrollSpy();
 
-  // Contact Form Submission
-  const contactForm = document.getElementById('contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const formData = new FormData(contactForm);
-      const name = formData.get('name');
-      const email = formData.get('email');
-      const message = formData.get('message');
-      
-      const subject = encodeURIComponent(`Portfolio contact from ${name}`);
-      const body = encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-      );
-      
-      window.location.href = `mailto:karpagaraman1605@gmail.com?subject=${subject}&body=${body}`;
-    });
-  }
-
-  // Bind Resume buttons to the resume file download/view
-  const resumeButtons = document.querySelectorAll('.download-btn-nav, .download-btn-mobile, .download-btn-hero');
-  resumeButtons.forEach(btn => {
-    btn.setAttribute('href', 'Karpagaraman-M-Resume.html');
-    btn.setAttribute('download', '');
-  });
 });
